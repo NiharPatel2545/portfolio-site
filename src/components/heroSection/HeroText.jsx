@@ -20,7 +20,7 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="md:text-[2.8rem] lg:text-6xl sm:text-4xl text-plasma font-bold uppercase"
       >
-        Nihar  Pankajkumar<br className="sm:hidden md:block" />
+        Nihar  <br className="sm:hidden md:block" />
         Patel
       </motion.h1>
       <motion.p

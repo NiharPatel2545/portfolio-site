@@ -20,8 +20,7 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="md:text-[2.8rem] lg:text-6xl sm:text-4xl text-plasma font-bold uppercase"
       >
-        Nihar  <br className="sm:hidden md:block" />
-        Patel
+        Nihar Patel<br className="sm:hidden md:block" />
       </motion.h1>
       <motion.p
         variants={fadeIn("up", 0.6)}

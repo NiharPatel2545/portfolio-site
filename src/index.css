@@ -19,3 +19,19 @@ body {
     0% 50%
   );
 }
+
+@layer utilities {
+  .custom-spin {
+    animation: hex-spin 20s linear infinite;
+    transform: translateX(-2.5rem); /* ⬅ More shift to the left */
+  }
+
+  @keyframes hex-spin {
+    0% {
+      transform: translateX(-2.5rem) rotate(0deg);  /* ⬅ Match this value */
+    }
+    100% {
+      transform: translateX(-2.5rem) rotate(-360deg); /* ⬅ Match this too */
+    }
+  }
+}

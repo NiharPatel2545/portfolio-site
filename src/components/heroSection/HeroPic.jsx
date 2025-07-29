@@ -12,18 +12,17 @@ const HeroPic = () => {
       className="h-full flex items-center justify-center relative"
     >
       
-      <div className="absolute w-[390px] h-[350px] z-0 hex-mask overflow-hidden bg-gradient-to-br from-cyan blur-sm via-violet-500 to-orange" />
+      <div className="absolute w-[390px] h-[350px] z-0 hex-mask overflow-hidden bg-gradient-to-br from-cyan blur-sm via-violet-500 to-orange  -translate-x-10" />
 
       <img
         src="/images/me.png"
         alt="Nihar Patel"
-        className="hex-mask w-[400px] h-[370px] object-cover z-10 -translate-y-2"
+        className="hex-mask w-[400px] h-[370px] object-cover z-10 -translate-y-2  -translate-x-10"
       />
       
 
       <div className="absolute flex justify-center items-center -z-10 animate-pulse">
-        <PiHexagonThin className="md:h-[90%] sm:h-[110%] min-h-[580px] w-auto text-cyan blur-md animate-[spin_20s_reverse_linear_infinite]" />
-      </div>
+    <PiHexagonThin className="md:h-[90%] sm:h-[110%] min-h-[580px] w-auto text-cyan blur-md custom-spin" />  </div>
     </motion.div>
   );
 };

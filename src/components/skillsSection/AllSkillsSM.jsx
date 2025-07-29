@@ -1,11 +1,13 @@
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiTypescript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
+import { FaJava } from "react-icons/fa";
+import { FaPython } from "react-icons/fa";
+import { FaNode } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiScratch } from "react-icons/si";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 
@@ -23,24 +25,32 @@ const skills = [
     icon: IoLogoJavascript,
   },
   {
-    skill: "TypeScript",
-    icon: SiTypescript,
-  },
-  {
     skill: "ReactJS",
     icon: FaReact,
   },
   {
-    skill: "Redux",
-    icon: SiRedux,
+    skill: "NodeJS",
+    icon: FaNode,
   },
   {
-    skill: "NextJS",
-    icon: SiNextdotjs,
+    skill: "ExpressJS",
+    icon: SiExpress,
   },
   {
-    skill: "TailwindCSS",
-    icon: RiTailwindCssFill,
+    skill: "MongoDB",
+    icon: SiMongodb,
+  },
+  {
+    skill: "Python",
+    icon: FaPython,
+  },
+  {
+    skill: "Java",
+    icon: FaJava,
+  },
+  {
+    skill: "Scratch",
+    icon: SiScratch,
   },
 ];
 

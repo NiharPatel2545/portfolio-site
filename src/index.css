@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-carbon text-lightGrey;
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(to bottom right, #0c0c0c, #1d2e40, #375d84);
+}
+
+.hex-mask {
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+}

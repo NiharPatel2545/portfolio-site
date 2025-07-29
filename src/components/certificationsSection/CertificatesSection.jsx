@@ -5,7 +5,7 @@ import CertificatesCard from "./CertificatesCard";
 
 const CertificatesSection = () => {
   return (
-    <div id="certificates" className="max-w-[1200px] mx-auto px-4">
+    <div id="certifications" className="max-w-[1200px] mx-auto px-4">
       <motion.div
         variants={fadeIn("top", 0)}
         initial="hidden"

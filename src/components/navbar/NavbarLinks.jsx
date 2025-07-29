@@ -6,6 +6,7 @@ const links = [
   { link: "Experience", section: "experience" },
   { link: "Projects", section: "projects" },
   { link: "Contact", section: "contact" },
+  { link: "Certifications", section: "certifications" },
 ];
 
 const NavbarLinks = () => {
@@ -23,8 +24,6 @@ const NavbarLinks = () => {
               offset={-130}
               to={link.section}
               className="cursor-pointer text-titanium hover:text-plasma transition-all duration-500"
-
-
             >
               {link.link}
             </Link>

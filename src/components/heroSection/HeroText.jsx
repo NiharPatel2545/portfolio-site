@@ -30,7 +30,7 @@ const HeroText = () => {
         className="text-lg mt-4"
       >
         A Passionate Web Developer & a Student <br /> With 4 Years Of
-        Experience In Coding Based In India.
+        Experience In Coding Based In Australia.
       </motion.p>
     </div>
   );

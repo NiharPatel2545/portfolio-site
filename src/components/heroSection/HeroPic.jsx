@@ -15,7 +15,7 @@ const HeroPic = () => {
       <div className="absolute w-[390px] h-[350px] z-0 hex-mask overflow-hidden bg-gradient-to-br from-cyan blur-sm via-violet-500 to-orange  -translate-x-10" />
 
       <img
-        src="public\images\test-image.jpg"
+        src="/images/test-image.jpg"
         alt="Nihar Patel"
         className="hex-mask w-[400px] h-[400px] object-cover object-[center_20%] z-10 translate-y-2 -translate-x-10"
       />

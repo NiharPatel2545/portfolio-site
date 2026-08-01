@@ -3,14 +3,15 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaReact } from "react-icons/fa";
-import { FaJava } from "react-icons/fa";
 import { FaPython } from "react-icons/fa";
 import { FaNode } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { SiMongodb } from "react-icons/si";
-import { SiScratch } from "react-icons/si";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
+import { SiNumpy, SiPandas } from "react-icons/si";
+import { FaChartBar } from "react-icons/fa"; 
+
 
 const skills = [
   {
@@ -45,14 +46,19 @@ const skills = [
     skill: "Python",
     icon: FaPython,
   },
-  {
-    skill: "Java",
-    icon: FaJava,
+    {
+    skill: "NumPy",
+    icon: SiNumpy,
   },
   {
-    skill: "Scratch",
-    icon: SiScratch,
+    skill: "Pandas",
+    icon: SiPandas,
   },
+  {
+    skill: "Seaborn",
+    icon: FaChartBar,
+  },
+
 ];
 
 const AllSkills = () => {

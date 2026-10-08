@@ -1,12 +1,21 @@
-<<<<<<< HEAD
-# portfolio-site
-=======
-# React + Vite
+# Nihar Patel – Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vite + React portfolio site.
 
-Currently, two official plugins are available:
+## Run locally
+    npm install
+    npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
->>>>>>> d56364c (first commit)
+## Build
+    npm run build      # output in dist/
+
+## Deploy
+Netlify reads `netlify.toml`: build command `npm run build`, publish folder `dist`, Node 22.
+
+## Edit content
+- Projects: `src/data/projects.js` (images in `public/images/projects/`)
+- Certificates: `src/data/certificates.js` (images in `public/images/certificates/`)
+- Skills: `src/data/skills.js`
+- Links, nav and about facts: `src/data/site.js`
+- Photo: `public/images/nihar.jpg`
+- Colors and layout: `src/styles.css` (colors are the variables at the top)

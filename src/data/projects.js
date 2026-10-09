@@ -6,7 +6,7 @@ export const projects = [
     text: 'Pick a spot and get soil estimates, a ranking of about 63 crops and management advice, with an honest range on every figure.',
     image: '/images/projects/agrishield.webp',
     alt: 'Screenshot of the AgriShield home page with a soil profile diagram',
-    link: 'https://agrishield-ai-production-0e42.up.railway.app/',
+    link: 'https://agrishieldai.com',
     cta: 'Open AgriShield',
   },
   {

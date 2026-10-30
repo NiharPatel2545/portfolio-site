@@ -1,16 +1,11 @@
-import { useCallback, useState } from 'react'
 import Navbar from './Navbar'
-import Lightbox from './Lightbox'
 import { links } from '../data/site'
-import { certificates } from '../data/certificates'
+import { projects } from '../data/projects'
+
+// Drawn back to front: Netflix peeks out behind, AgriShield sits left, The Guardian lands in front.
+const pile = ['Netflix clone', 'AgriShield', 'The Guardian'].map((n) => projects.find((p) => p.name === n))
 
 export default function Hero() {
-  const [open, setOpen] = useState(null)
-  const close = useCallback(() => setOpen(null), [])
-  // Newest three, drawn oldest first so the newest lands on top of the pile.
-  const pile = certificates.slice(0, 3).reverse()
-  const firstYear = certificates[certificates.length - 1].date.slice(-4)
-
   return (
     <header id="hero">
       <div className="wrap">
@@ -31,19 +26,18 @@ export default function Hero() {
 
           <figure className="pile">
             <div className="pile-cards">
-              {pile.map((c) => (
-                <button key={c.name} type="button" onClick={() => setOpen(c)} aria-label={`View ${c.name} certificate`}>
-                  <img src={c.image} alt={`${c.name} certificate`} width="1200" height="800" />
-                </button>
+              {pile.map((p) => (
+                <a key={p.name} href={p.link} target="_blank" rel="noopener noreferrer" aria-label={`Open ${p.name}`}>
+                  <img src={p.image} alt={p.alt} width="1600" height="1000" />
+                </a>
               ))}
             </div>
             <figcaption>
-              {certificates.length} certificates since {firstYear}, newest on top. <a href="#certs">See All</a>
+              AgriShield, The Guardian and {projects.length - 2} more projects. <a href="#projects">See All</a>
             </figcaption>
           </figure>
         </div>
       </div>
-      {open && <Lightbox cert={open} onClose={close} />}
     </header>
   )
 }

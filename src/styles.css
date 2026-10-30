@@ -56,12 +56,12 @@ p{margin:0 0 1rem}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}}
 .pile{margin:0;animation-delay:240ms}
 .pile-cards{position:relative;aspect-ratio:10/7}
-.pile-cards button{--r:0deg;position:absolute;width:70%;padding:0;border:0;background:#fff;cursor:zoom-in;transform:rotate(var(--r));transition:transform .25s ease-out}
-.pile-cards button:nth-child(1){--r:5deg;left:24%;top:2%}
-.pile-cards button:nth-child(2){--r:-3deg;left:13%;top:14%}
-.pile-cards button:nth-child(3){--r:1deg;left:3%;top:28%}
-.pile-cards button:hover{transform:translateY(-10px) rotate(var(--r))}
-.pile-cards img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;object-position:top}
+.pile-cards a{--r:0deg;position:absolute;width:62%;display:block;background:#fff;transform:rotate(var(--r));transition:transform .25s ease-out}
+.pile-cards a:nth-child(1){--r:4deg;left:35%;top:1%}
+.pile-cards a:nth-child(2){--r:-3deg;left:1%;top:16%}
+.pile-cards a:nth-child(3){--r:2deg;left:35%;top:40%}
+.pile-cards a:hover{transform:translateY(-10px) rotate(var(--r))}
+.pile-cards img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
 .pile figcaption{margin-top:1rem;padding-left:3%;font-size:1rem;color:var(--soft)}
 
 /* about */

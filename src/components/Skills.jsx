@@ -1,5 +1,5 @@
 import Section from './Section'
-import { focus, stacks } from '../data/skills'
+import { focus, stacks, path } from '../data/skills'
 
 export default function Skills() {
   return (
@@ -36,6 +36,16 @@ export default function Skills() {
           </div>
         ))}
       </dl>
+
+      <h3 className="sub">How my stack grew</h3>
+      <ol className="path">
+        {path.map((p) => (
+          <li key={p.year} className={p.now ? 'now' : ''}>
+            <b>{p.year}</b>
+            {p.text}
+          </li>
+        ))}
+      </ol>
     </Section>
   )
 }

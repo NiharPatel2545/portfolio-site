@@ -8,35 +8,39 @@ export default function Hero() {
 
   return (
     <header id="hero">
-      <div className="wrap">
-        <Navbar />
-        <div className="hero">
-          <div className="hero-text">
+      <div className="field">
+        <div className="wrap">
+          <Navbar />
+          <div className="hero">
             <h1>Nihar<br />Patel</h1>
-            <p className="lead">
-              Computer Science student at Monash University. Five years of building web apps, now
-              pointed at machine learning. Right now I'm building AgriShield, which gives farmers soil
-              and crop advice for any spot on the map.
-            </p>
-            <div className="actions">
-              <a className="btn" href="#projects">See AgriShield</a>
-              <a href={links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href={links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <div>
+              <p className="lead">
+                Computer Science student at Monash University. Five years of building web apps, now
+                pointed at machine learning. Right now I'm building AgriShield, which gives farmers soil
+                and crop advice for any spot on the map.
+              </p>
+              <div className="actions">
+                <a className="btn" href="#projects">See AgriShield</a>
+                <a href={links.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href={links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </div>
             </div>
           </div>
-          <figure className="strata">
-            <ol>
-              {layers.map((p, i) => (
-                <li key={p.year} className={p.now ? 'now' : ''} style={{ '--i': i }}>
-                  <b>{p.year}</b>
-                  <span>{p.text}</span>
-                </li>
-              ))}
-            </ol>
-            <figcaption>What I've learned, one layer a year</figcaption>
-          </figure>
         </div>
       </div>
+      <figure className="strata">
+        <ol>
+          {layers.map((p, i) => (
+            <li key={p.year} className={p.now ? 'now' : ''} style={{ '--i': i }}>
+              <div className="wrap">
+                <b>{p.year}</b>
+                <span>{p.text}</span>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <figcaption className="wrap">What I've learned, one layer a year</figcaption>
+      </figure>
     </header>
   )
 }

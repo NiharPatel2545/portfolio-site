@@ -2,7 +2,7 @@
    Earth tones appear only in the strata column, where they mean something. */
 :root{
   --ground:#E9ECE5; --surface:#F4F5F0; --ink:#1D2620; --muted:#545E55; --line:#C9CFC4;
-  --green:#2F6B3F; --on-green:#F4F5F0;
+  --green:#2F6B3F; --on-green:#F4F5F0; --field:#E2B84A; --soil:#2B2118;
   --deep:#1F2B23; --deep-ink:#E3E6DD; --deep-muted:#A9B3A6; --deep-green:#A5D29A;
   --l0:#3E6B45; --l1:#4A3B2C; --l2:#655140; --l3:#857055; --l4:#A99572; --l5:#C9BC98;
   --display:"Archivo","Arial Narrow",Arial,sans-serif;
@@ -11,10 +11,10 @@
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){--ground:#161A17;--surface:#1D221E;--ink:#E3E6DD;--muted:#A3AA9C;--line:#323A33;
-    --green:#93C48A;--on-green:#161A17;--deep:#0F1410}
+    --green:#93C48A;--on-green:#161A17;--deep:#0F1410;--field:#C9A23F}
 }
 :root[data-theme="dark"]{--ground:#161A17;--surface:#1D221E;--ink:#E3E6DD;--muted:#A3AA9C;--line:#323A33;
-  --green:#93C48A;--on-green:#161A17;--deep:#0F1410}
+  --green:#93C48A;--on-green:#161A17;--deep:#0F1410;--field:#C9A23F}
 
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -40,19 +40,21 @@ p{margin:0 0 1rem}
 .top ul a{color:var(--muted);text-decoration:none}
 .top ul a:hover{color:var(--ink)}
 
-/* hero */
-#hero{padding-bottom:5rem}
-.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:end;padding-top:4rem}
-.hero h1{font-size:clamp(4.5rem,14vw,10rem);font-weight:800;font-stretch:62%;line-height:.84;letter-spacing:-.015em;margin-bottom:2.2rem}
-.lead{max-width:31rem;font-size:1.12rem}
-.actions{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;margin-top:1.8rem;font-family:var(--display);font-weight:600}
-.btn{display:inline-block;background:var(--green);color:var(--on-green);text-decoration:none;font-family:var(--display);font-weight:650;padding:.75rem 1.3rem;border-radius:3px}
-.btn:hover{filter:brightness(1.12)}
+/* hero: a wheat field above ground, the soil profile below it */
+.field{--ink:var(--soil);--muted:#4D3D25;--green:var(--soil);background:var(--field);color:var(--soil)}
+.hero{display:grid;grid-template-columns:auto minmax(0,29rem);justify-content:space-between;align-items:end;gap:2.5rem 4rem;padding:5rem 0 0}
+.hero h1{font-size:clamp(4.5rem,15vw,11.5rem);font-weight:800;font-stretch:62%;line-height:.8;letter-spacing:-.015em;margin-bottom:-.02em}
+.lead{font-size:1.12rem;margin-bottom:1.6rem}
+.actions{display:flex;align-items:center;gap:1.6rem;flex-wrap:wrap;padding-bottom:1.6rem;font-family:var(--display);font-weight:650}
+.actions a:not(.btn){color:var(--soil);text-decoration-thickness:2px}
+.btn{display:inline-block;background:var(--ink);color:var(--ground);text-decoration:none;font-family:var(--display);font-weight:650;font-stretch:90%;padding:.85rem 1.4rem .95rem;box-shadow:inset 0 -4px 0 rgba(0,0,0,.3);transition:box-shadow .15s ease-out}
+.btn:hover{box-shadow:inset 0 -.55rem 0 var(--l0)}
 
 .strata{margin:0}
-.strata ol{list-style:none;margin:0;padding:0;border-radius:2px;overflow:hidden}
-.strata li{display:flex;align-items:center;gap:1.1rem;padding:0 1.1rem;color:#F1EEE4;font-family:var(--display);
-  height:calc(4.4rem - var(--i) * .5rem);animation:settle .55s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc((5 - var(--i)) * 90ms)}
+.strata ol{list-style:none;margin:0;padding:0}
+.strata li{color:#F1EEE4;font-family:var(--display);height:calc(4.2rem - var(--i) * .45rem);
+  animation:settle .55s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc((5 - var(--i)) * 90ms)}
+.strata .wrap{display:flex;align-items:center;gap:1.4rem;height:100%}
 .strata li:nth-child(1){background:var(--l0)}
 .strata li:nth-child(2){background:var(--l1)}
 .strata li:nth-child(3){background:var(--l2)}
@@ -60,9 +62,9 @@ p{margin:0 0 1rem}
 .strata li:nth-child(5){background:var(--l4);color:#231D15}
 .strata li:nth-child(6){background:var(--l5);color:#231D15}
 .strata b{font-weight:700;font-stretch:70%;font-size:1.25rem;min-width:3rem}
-.strata .now{font-size:1.1rem}
+.strata .now{font-size:1.15rem}
 .strata .now span{font-weight:650}
-.strata figcaption{font-family:var(--display);font-size:.9rem;color:var(--muted);margin-top:.7rem}
+.strata figcaption{font-family:var(--display);font-size:.9rem;color:var(--muted);padding-top:.8rem}
 @keyframes settle{from{opacity:0;transform:translateY(-14px)}}
 
 /* about */
@@ -135,6 +137,7 @@ footer .wrap{border-top:1px solid #34413A;padding-top:1.4rem}
 @media (max-width:52rem){
   .hero,.feature{grid-template-columns:1fr;gap:2.5rem}
   .hero{padding-top:2.5rem}
+  .hero h1{margin-bottom:0}
   .about{grid-template-columns:1fr;gap:1.8rem}
   .portrait{width:min(60%,13rem)}
   .focus-cols{grid-template-columns:1fr}
@@ -143,8 +146,9 @@ footer .wrap{border-top:1px solid #34413A;padding-top:1.4rem}
   .earlier .stack,.earlier .when{grid-column:2;text-align:left}
   .band{padding:4rem 0}
 }
-@media (max-width:30rem){.facts{grid-template-columns:1fr}}
+@media (max-width:30rem){.facts{grid-template-columns:1fr}.top ul{gap:.9rem;font-size:.95rem}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .strata li{animation:none}
+  .btn{transition:none}
 }

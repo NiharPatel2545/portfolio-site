@@ -54,16 +54,15 @@ p{margin:0 0 1rem}
 .btn:hover{background:var(--ink);color:var(--ground)}
 .btn:active{transform:translateY(1px)}
 
-.viewer{margin:0;background:var(--cobalt);color:var(--on-cobalt);padding:1.5rem 1.5rem 1.6rem}
+.viewer{margin:0;background:var(--step);color:var(--ink);padding:1.5rem 1.5rem 1.6rem}
 .screen{display:block;overflow:hidden;background:#fff}
 .screen img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;animation:swap .45s ease-out both;transition:transform .4s ease-out}
 .screen:hover img{transform:scale(1.02)}
 .viewer figcaption{margin:1.1rem 0 1.2rem;font-size:1.05rem;line-height:1.45;max-width:44rem}
 .picker{display:flex;flex-wrap:wrap;gap:.5rem}
-.picker button{font:inherit;font-size:.95rem;font-weight:550;color:var(--on-cobalt);background:rgba(255,255,255,.12);border:0;padding:.5rem .85rem;cursor:pointer;transition:background-color .15s ease-out}
-.picker button:hover{background:rgba(255,255,255,.24)}
-.picker button[aria-pressed="true"]{background:var(--on-cobalt);color:var(--cobalt)}
-.viewer :focus-visible{outline-color:var(--on-cobalt)}
+.picker button{font:inherit;font-size:.95rem;font-weight:550;color:var(--ink);background:var(--ground);border:0;padding:.5rem .85rem;cursor:pointer;transition:background-color .15s ease-out,color .15s ease-out}
+.picker button:hover{color:var(--link)}
+.picker button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}}
 @keyframes swap{from{opacity:0;transform:scale(1.03)}}
 

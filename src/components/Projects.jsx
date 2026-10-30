@@ -8,7 +8,7 @@ export default function Projects() {
     <Section id="projects" title="Projects">
       <article className="feature">
         <a className="shot" href={lead.link} target="_blank" rel="noopener noreferrer" tabIndex={-1}>
-          <img src={lead.image} alt={lead.alt} loading="lazy" />
+          <img src={lead.image} alt={lead.alt} width="1600" height="1000" loading="lazy" />
         </a>
         <div>
           <p className="when">{lead.tag}, {lead.date}</p>
@@ -23,7 +23,7 @@ export default function Projects() {
       <ul className="earlier">
         {earlier.map((p) => (
           <li key={p.name}>
-            <img src={p.image} alt={p.alt} loading="lazy" />
+            <img src={p.image} alt={p.alt} width="1600" height="1000" loading="lazy" />
             <div>
               <h4>
                 <a href={p.link} target="_blank" rel="noopener noreferrer">{p.name}</a>

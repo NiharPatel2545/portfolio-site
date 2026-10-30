@@ -13,7 +13,7 @@ export default function Certificates() {
         {certificates.map((c) => (
           <li key={c.name}>
             <button className="th" onClick={() => setOpen(c)} aria-label={`View ${c.name} certificate`}>
-              <img src={c.image} alt={`${c.name} certificate`} loading="lazy" />
+              <img src={c.image} alt={`${c.name} certificate`} width="1200" height="800" loading="lazy" />
             </button>
             <h3>{c.name}</h3>
             <p>{c.issuer}, {c.date}</p>

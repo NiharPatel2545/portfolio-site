@@ -1,11 +1,8 @@
-import { useState } from 'react'
 import Navbar from './Navbar'
 import { links } from '../data/site'
-import { projects } from '../data/projects'
+import { check } from '../data/agrishield'
 
 export default function Hero() {
-  const [shown, setShown] = useState(projects[0])
-
   return (
     <header id="hero">
       <div className="wrap">
@@ -23,20 +20,52 @@ export default function Hero() {
               <a href={links.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
           </div>
-          <figure className="viewer">
-            <a className="screen" href={shown.link} target="_blank" rel="noopener noreferrer">
-              <img key={shown.name} src={shown.image} alt={shown.alt} width="1600" height="1000" fetchPriority="high" />
-            </a>
-            <figcaption aria-live="polite">
-              <b>{shown.name}</b>, {shown.date}. {shown.text}
-            </figcaption>
-            <div className="picker" role="group" aria-label="Choose a project to preview">
-              {projects.map((p) => (
-                <button key={p.name} type="button" aria-pressed={p === shown} onClick={() => setShown(p)}>
-                  {p.name}
-                </button>
-              ))}
+
+          <figure className="report" data-ui>
+            <div className="report-head">
+              <span><b>AgriShield</b> check, {check.place}</span>
+              <span>{check.date}</span>
             </div>
+            <p className="verdict">{check.verdict}</p>
+            <dl className="figs">
+              {check.figures.map((f) => (
+                <div key={f.label}>
+                  <dt>{f.label}</dt>
+                  <dd>
+                    <strong>{f.value}</strong>
+                    <span>{f.note}</span>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <table className="crops">
+              <caption>Top 4 of 63 crops scored, rain only</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Crop</th>
+                  <th scope="col">Fit</th>
+                  <th scope="col">Yield</th>
+                  <th scope="col">Good seasons</th>
+                </tr>
+              </thead>
+              <tbody>
+                {check.crops.map((c) => (
+                  <tr key={c.name}>
+                    <th scope="row">{c.name}</th>
+                    <td>
+                      <span className="bar" style={{ '--v': `${c.fit}%` }} aria-hidden="true" />
+                      {c.fit}%
+                    </td>
+                    <td>{c.yield}</td>
+                    <td>{c.seasons}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <figcaption>
+              Real output for the centre of Horsham ({check.coords}).{' '}
+              <a href="https://www.agrishieldai.com" target="_blank" rel="noopener noreferrer">Check Your Own Field</a>
+            </figcaption>
           </figure>
         </div>
       </div>

@@ -101,6 +101,8 @@ p{margin:0 0 1rem}
 .earlier li:hover{background:var(--cobalt-soft)}
 .earlier img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top}
 .earlier h4 a{color:var(--ink);text-decoration:none}
+.earlier li{position:relative;cursor:pointer}
+.earlier h4 a::after{content:"";position:absolute;inset:0}
 .earlier h4 a:hover{text-decoration:underline}
 .earlier li:hover,.earlier li:hover .stack,.earlier li:hover .when,.earlier li:hover p{color:#121417}
 .earlier li:hover h4 a{color:#121417}

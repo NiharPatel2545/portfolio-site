@@ -17,7 +17,10 @@ export default function Projects() {
             <h3>{p.name}</h3>
             <p>{p.text}</p>
             <p className="stack">{p.stack}</p>
-            <a className="btn" href={p.link} target="_blank" rel="noopener noreferrer">{p.cta}</a>
+            <div className="actions">
+              <a className="btn" href={p.link} target="_blank" rel="noopener noreferrer">{p.cta}</a>
+              {p.repo && <a href={p.repo} target="_blank" rel="noopener noreferrer">Source on GitHub</a>}
+            </div>
           </div>
         </article>
       ))}

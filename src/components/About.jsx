@@ -5,6 +5,7 @@ export default function About() {
   return (
     <Section id="about" title="About">
       <div className="about">
+        <img className="portrait" src="/images/nihar.jpg" alt="Portrait of Nihar Patel" width="640" height="800" />
         <div>
           <p>
             I like understanding how systems really work. I started in 2021 with Scratch, then taught
@@ -16,15 +17,15 @@ export default function About() {
             that gives farmers soil and crop advice for any location.
           </p>
           <p>My goal is a career building machine learning systems that people can trust and use.</p>
+          <dl className="facts">
+            {facts.map(([term, value]) => (
+              <div key={term}>
+                <dt>{term}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
-        <dl className="facts">
-          {facts.map(([term, value]) => (
-            <div key={term}>
-              <dt>{term}</dt>
-              <dd>{value}</dd>
-            </div>
-          ))}
-        </dl>
       </div>
     </Section>
   )

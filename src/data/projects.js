@@ -2,7 +2,8 @@ export const projects = [
   {
     name: 'AgriShield',
     tag: 'Building now',
-    meta: '2026 · Python, FastAPI, React, TypeScript',
+    date: '2026',
+    stack: 'Python, FastAPI, React, TypeScript',
     text: 'Pick a spot and get soil estimates, a ranking of about 63 crops and management advice, with an honest range on every figure.',
     image: '/images/projects/agrishield.webp',
     alt: 'Screenshot of the AgriShield home page with a soil profile diagram',
@@ -11,7 +12,8 @@ export const projects = [
   },
   {
     name: 'E-commerce website',
-    meta: 'Jul 2025 · MERN stack',
+    date: 'Jul 2025',
+    stack: 'MERN stack',
     text: 'Full-stack online store.',
     image: '/images/projects/ecommerce.webp',
     alt: 'Screenshot of the e-commerce website',
@@ -19,7 +21,8 @@ export const projects = [
   },
   {
     name: 'Blog network website',
-    meta: 'Jan 2024 · Web',
+    date: 'Jan 2024',
+    stack: 'Web',
     text: 'Multi-page blogging site.',
     image: '/images/projects/blog.webp',
     alt: 'Screenshot of the blog network website',
@@ -27,7 +30,8 @@ export const projects = [
   },
   {
     name: 'Twitter clone',
-    meta: 'Jul 2025 · Full-stack',
+    date: 'Jul 2025',
+    stack: 'Full-stack',
     text: 'Social feed focused on UI and state.',
     image: '/images/projects/twitter.webp',
     alt: 'Screenshot of the Twitter clone',
@@ -35,7 +39,8 @@ export const projects = [
   },
   {
     name: 'Netflix clone',
-    meta: 'Jun 2025 · React',
+    date: 'Jun 2025',
+    stack: 'React',
     text: 'Responsive streaming interface.',
     image: '/images/projects/netflix.webp',
     alt: 'Screenshot of the Netflix clone',
@@ -43,7 +48,8 @@ export const projects = [
   },
   {
     name: 'Basic MERN app',
-    meta: 'May 2025 · MongoDB, Express, React, Node',
+    date: 'May 2025',
+    stack: 'MongoDB, Express, React, Node',
     text: 'My first app connecting all four MERN parts.',
     image: '/images/projects/mern.webp',
     alt: 'Screenshot of the basic MERN app',

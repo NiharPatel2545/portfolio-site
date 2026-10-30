@@ -15,10 +15,8 @@ export default function Certificates() {
             <button className="th" onClick={() => setOpen(c)} aria-label={`View ${c.name} certificate`}>
               <img src={c.image} alt={`${c.name} certificate`} loading="lazy" />
             </button>
-            <div className="cap">
-              <h3>{c.name}</h3>
-              <span>{c.meta}</span>
-            </div>
+            <h3>{c.name}</h3>
+            <p>{c.issuer}, {c.date}</p>
           </li>
         ))}
       </ul>

@@ -2,30 +2,39 @@ import Section from './Section'
 import { projects } from '../data/projects'
 
 export default function Projects() {
+  const [lead, ...earlier] = projects
+
   return (
-    <Section
-      id="projects"
-      title="Projects"
-      intro="AgriShield is what I'm building now. The rest are full-stack projects I built before university, from a blog network and online store to clones of Twitter and Netflix."
-    >
-      <div className="pj">
-        {projects.map((p) => (
-          <article className="pc" key={p.name}>
-            <div className="shot">
-              <img src={p.image} alt={p.alt} loading="lazy" />
-            </div>
-            <div className="body">
-              {p.tag && <span className="tag">{p.tag}</span>}
-              <h3>{p.name}</h3>
-              <span className="meta">{p.meta}</span>
+    <Section id="projects" title="Projects">
+      <article className="feature">
+        <a className="shot" href={lead.link} target="_blank" rel="noopener noreferrer" tabIndex={-1}>
+          <img src={lead.image} alt={lead.alt} loading="lazy" />
+        </a>
+        <div>
+          <p className="when">{lead.tag}, {lead.date}</p>
+          <h3>{lead.name}</h3>
+          <p>{lead.text}</p>
+          <p className="stack">{lead.stack}</p>
+          <a className="btn" href={lead.link} target="_blank" rel="noopener noreferrer">{lead.cta}</a>
+        </div>
+      </article>
+
+      <h3 className="sub">Before university</h3>
+      <ul className="earlier">
+        {earlier.map((p) => (
+          <li key={p.name}>
+            <img src={p.image} alt={p.alt} loading="lazy" />
+            <div>
+              <h4>
+                <a href={p.link} target="_blank" rel="noopener noreferrer">{p.name}</a>
+              </h4>
               <p>{p.text}</p>
-              <a href={p.link} target="_blank" rel="noopener noreferrer">
-                {p.cta || 'View project'}
-              </a>
             </div>
-          </article>
+            <span className="stack">{p.stack}</span>
+            <span className="when">{p.date}</span>
+          </li>
         ))}
-      </div>
+      </ul>
     </Section>
   )
 }

@@ -17,8 +17,9 @@ export default function About() {
             that gives farmers soil and crop advice for any location.
           </p>
           <p>
-            I also love cybersecurity: how systems get broken, and how to keep them safe. My next project is
-            a security one.
+            I also love cybersecurity: how systems get broken, and how to keep them safe. So far that's The
+            Guardian, a guard that stops AI agents being tricked by prompt injection, and launchcheck, which
+            finds the usual security slip-ups in a website before launch.
           </p>
           <p>My goal is a career building machine learning systems that people can trust and use.</p>
           <dl className="facts">

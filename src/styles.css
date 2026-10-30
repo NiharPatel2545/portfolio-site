@@ -86,6 +86,9 @@ p{margin:0 0 1rem}
 
 /* projects */
 .feature{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:3.5rem;align-items:center;margin-top:1.5rem}
+.feature+.feature{margin-top:6rem}
+.feature:nth-of-type(even){grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.feature:nth-of-type(even) .shot{order:2}
 .feature .shot{display:block;overflow:hidden;background:var(--step)}
 .feature .shot img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;transition:transform .4s ease-out}
 .feature .shot:hover img{transform:scale(1.02)}
@@ -135,7 +138,9 @@ footer{background:var(--cobalt);color:var(--cobalt-soft);padding:0 0 2.5rem;font
   .lead{max-width:36rem}
 }
 @media (max-width:56rem){
-  .feature,.about{grid-template-columns:1fr;gap:2.5rem}
+  .feature,.about,.feature:nth-of-type(even){grid-template-columns:1fr;gap:2.5rem}
+  .feature:nth-of-type(even) .shot{order:0}
+  .feature+.feature{margin-top:4rem}
   .portrait{width:min(60%,14rem)}
   .stacks>div{grid-template-columns:1fr;gap:.2rem}
   .path{grid-template-columns:repeat(3,1fr)}

@@ -3,7 +3,7 @@ export const skills = [
     area: 'Machine learning',
     tools: 'pandas, NumPy, seaborn, scikit-learn',
     notes: [
-      'Built AgriShield: crop and soil modelling with honest ranges. Kaggle Data Visualization certificate.',
+      'Built AgriShield: crop and soil modelling with honest ranges. Fine-tuned guardian-v4, a prompt-injection classifier. Kaggle Data Visualization certificate.',
       'Studying Computer Science at Monash.',
       'Next: deep learning, and a project on a public dataset.',
     ],
@@ -25,8 +25,8 @@ export const skills = [
   },
   {
     area: 'Cybersecurity',
-    tools: 'Learning now',
-    notes: ['My next project is a security one.'],
+    tools: 'Prompt-injection defence, web security checks',
+    notes: ['The Guardian, a guard for AI agents, and launchcheck, a security check for websites.'],
   },
 ]
 

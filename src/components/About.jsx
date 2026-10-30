@@ -16,6 +16,10 @@ export default function About() {
             learning: working with data in Python, learning scikit-learn, and building AgriShield, a tool
             that gives farmers soil and crop advice for any location.
           </p>
+          <p>
+            I also love cybersecurity: how systems get broken, and how to keep them safe. My next project is
+            a security one.
+          </p>
           <p>My goal is a career building machine learning systems that people can trust and use.</p>
           <dl className="facts">
             {facts.map(([term, value]) => (

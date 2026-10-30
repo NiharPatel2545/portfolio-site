@@ -1,37 +1,32 @@
-export const focus = {
-  title: 'AI and machine learning',
-  text: "The direction I'm building toward, using my degree and my own projects.",
-  columns: [
-    {
-      heading: 'Built',
-      items: ['AgriShield: crop and soil modelling with honest ranges', 'Kaggle Data Visualization certificate'],
-    },
-    {
-      heading: 'Studying',
-      items: ['Computer Science at Monash', 'pandas, NumPy, seaborn, scikit-learn'],
-    },
-    {
-      heading: 'Next',
-      items: ['Deep learning', 'A project on a public dataset'],
-    },
-  ],
-}
-
-export const stacks = [
+export const skills = [
   {
-    title: 'Languages',
-    chips: ['Python', 'JavaScript', 'TypeScript', 'Java'],
-    note: "Python runs AgriShield's back end.",
+    area: 'Machine learning',
+    tools: 'pandas, NumPy, seaborn, scikit-learn',
+    notes: [
+      'Built AgriShield: crop and soil modelling with honest ranges. Kaggle Data Visualization certificate.',
+      'Studying Computer Science at Monash.',
+      'Next: deep learning, and a project on a public dataset.',
+    ],
   },
   {
-    title: 'Front end',
-    chips: ['React', 'HTML and CSS'],
-    note: 'AgriShield, e-commerce site, Netflix and Twitter clones.',
+    area: 'Languages',
+    tools: 'Python, JavaScript, TypeScript, Java',
+    notes: ["Python runs AgriShield's back end."],
   },
   {
-    title: 'Back end',
-    chips: ['Node.js', 'Express', 'FastAPI', 'MongoDB'],
-    note: 'MERN apps and AgriShield. MongoDB certificate, 2024.',
+    area: 'Front end',
+    tools: 'React, HTML and CSS',
+    notes: ['AgriShield, e-commerce site, Netflix and Twitter clones.'],
+  },
+  {
+    area: 'Back end',
+    tools: 'Node.js, Express, FastAPI, MongoDB',
+    notes: ['MERN apps and AgriShield. MongoDB certificate, 2024.'],
+  },
+  {
+    area: 'Cybersecurity',
+    tools: 'Learning now',
+    notes: ['My next project is a security one.'],
   },
 ]
 

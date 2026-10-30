@@ -14,7 +14,7 @@ export const nav = [
 
 export const facts = [
   ['Studying', 'Bachelor of Computer Science, Monash University'],
-  ['Focus', 'AI and machine learning, data analysis, full-stack web'],
+  ['Focus', 'AI and machine learning, data analysis, full-stack web, cybersecurity'],
   ['Coding since', '2021'],
   ['Based in', 'Melbourne, Australia'],
 ]

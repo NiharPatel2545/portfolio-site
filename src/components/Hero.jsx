@@ -1,8 +1,16 @@
+import { useCallback, useState } from 'react'
 import Navbar from './Navbar'
+import Lightbox from './Lightbox'
 import { links } from '../data/site'
-import { check } from '../data/agrishield'
+import { certificates } from '../data/certificates'
 
 export default function Hero() {
+  const [open, setOpen] = useState(null)
+  const close = useCallback(() => setOpen(null), [])
+  // Newest three, drawn oldest first so the newest lands on top of the pile.
+  const pile = certificates.slice(0, 3).reverse()
+  const firstYear = certificates[certificates.length - 1].date.slice(-4)
+
   return (
     <header id="hero">
       <div className="wrap">
@@ -11,8 +19,8 @@ export default function Hero() {
           <div className="hero-text">
             <h1>Nihar Patel</h1>
             <p className="lead">
-              I study Computer Science at Monash University and build machine learning tools, and the web
-              apps around them.
+              I study Computer Science at Monash University. I build machine learning tools and web apps,
+              and I'm getting into cybersecurity.
             </p>
             <div className="actions">
               <a className="btn" href="#projects">View All Projects</a>
@@ -21,54 +29,21 @@ export default function Hero() {
             </div>
           </div>
 
-          <figure className="report" data-ui>
-            <div className="report-head">
-              <span><b>AgriShield</b> check, {check.place}</span>
-              <span>{check.date}</span>
-            </div>
-            <p className="verdict">{check.verdict}</p>
-            <dl className="figs">
-              {check.figures.map((f) => (
-                <div key={f.label}>
-                  <dt>{f.label}</dt>
-                  <dd>
-                    <strong>{f.value}</strong>
-                    <span>{f.note}</span>
-                  </dd>
-                </div>
+          <figure className="pile">
+            <div className="pile-cards">
+              {pile.map((c) => (
+                <button key={c.name} type="button" onClick={() => setOpen(c)} aria-label={`View ${c.name} certificate`}>
+                  <img src={c.image} alt={`${c.name} certificate`} width="1200" height="800" />
+                </button>
               ))}
-            </dl>
-            <table className="crops">
-              <caption>Top 4 of 63 crops scored, rain only</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Crop</th>
-                  <th scope="col">Fit</th>
-                  <th scope="col">Yield</th>
-                  <th scope="col">Good seasons</th>
-                </tr>
-              </thead>
-              <tbody>
-                {check.crops.map((c) => (
-                  <tr key={c.name}>
-                    <th scope="row">{c.name}</th>
-                    <td>
-                      <span className="bar" style={{ '--v': `${c.fit}%` }} aria-hidden="true" />
-                      {c.fit}%
-                    </td>
-                    <td>{c.yield}</td>
-                    <td>{c.seasons}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            </div>
             <figcaption>
-              Real output for the centre of Horsham ({check.coords}).{' '}
-              <a href="https://www.agrishieldai.com" target="_blank" rel="noopener noreferrer">Check Your Own Field</a>
+              {certificates.length} certificates since {firstYear}, newest on top. <a href="#certs">See All</a>
             </figcaption>
           </figure>
         </div>
       </div>
+      {open && <Lightbox cert={open} onClose={close} />}
     </header>
   )
 }

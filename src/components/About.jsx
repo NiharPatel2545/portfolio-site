@@ -17,7 +17,7 @@ export default function About() {
             that gives farmers soil and crop advice for any location.
           </p>
           <p>
-            I also love cybersecurity: how systems get broken, and how to keep them safe. So far that's The
+            I also love cybersecurity: how systems get broken, and how to keep them safe. So far that's Blue
             Guardian, a guard that stops AI agents being tricked by prompt injection, and launchcheck, which
             finds the usual security slip-ups in a website before launch.
           </p>

@@ -2,8 +2,8 @@ import Navbar from './Navbar'
 import { links } from '../data/site'
 import { projects } from '../data/projects'
 
-// Drawn back to front: Netflix peeks out behind, AgriShield sits left, The Guardian lands in front.
-const pile = ['Netflix clone', 'AgriShield', 'The Guardian'].map((n) => projects.find((p) => p.name === n))
+// Drawn back to front: Netflix peeks out behind, AgriShield sits left, Blue Guardian lands in front.
+const pile = ['Netflix clone', 'AgriShield', 'Blue Guardian'].map((n) => projects.find((p) => p.name === n))
 
 export default function Hero() {
   return (
@@ -33,7 +33,7 @@ export default function Hero() {
               ))}
             </div>
             <figcaption>
-              AgriShield, The Guardian and {projects.length - 2} more projects. <a href="#projects">See All</a>
+              AgriShield, Blue Guardian and {projects.length - 2} more projects. <a href="#projects">See All</a>
             </figcaption>
           </figure>
         </div>

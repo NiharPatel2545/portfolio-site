@@ -28,7 +28,15 @@ export default function Hero() {
             <div className="pile-cards">
               {pile.map((p) => (
                 <a key={p.name} href={p.link} target="_blank" rel="noopener noreferrer" aria-label={`Open ${p.name}`}>
-                  <img src={p.image} alt={p.alt} width="1600" height="1000" />
+                  <img
+                    src={p.image}
+                    srcSet={p.small && `${p.small} 800w, ${p.image} 1600w`}
+                    sizes="(max-width: 60rem) 62vw, 420px"
+                    alt={p.alt}
+                    width="1600"
+                    height="1000"
+                    fetchPriority="high"
+                  />
                 </a>
               ))}
             </div>

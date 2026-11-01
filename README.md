@@ -17,5 +17,5 @@ Netlify reads `netlify.toml`: build command `npm run build`, publish folder `dis
 - Certificates: `src/data/certificates.js` (images in `public/images/certificates/`)
 - Skills: `src/data/skills.js`
 - Links, nav and about facts: `src/data/site.js`
-- Photo: `public/images/nihar.jpg`
+- Photo: `public/images/nihar.webp`
 - Colors and layout: `src/styles.css` (colors are the variables at the top)

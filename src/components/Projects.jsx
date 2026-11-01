@@ -10,7 +10,15 @@ export default function Projects() {
       {uni.map((p) => (
         <article className="feature" key={p.name}>
           <a className="shot" href={p.link} target="_blank" rel="noopener noreferrer" tabIndex={-1}>
-            <img src={p.image} alt={p.alt} width="1600" height="1000" loading="lazy" />
+            <img
+              src={p.image}
+              srcSet={p.small && `${p.small} 800w, ${p.image} 1600w`}
+              sizes="(max-width: 56rem) 100vw, 760px"
+              alt={p.alt}
+              width="1600"
+              height="1000"
+              loading="lazy"
+            />
           </a>
           <div>
             <p className="when">{p.tag ? `${p.tag}, ${p.date}` : p.date}</p>

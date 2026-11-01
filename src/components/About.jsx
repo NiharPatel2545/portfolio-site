@@ -5,7 +5,7 @@ export default function About() {
   return (
     <Section id="about" title="About">
       <div className="about">
-        <img className="portrait" src="/images/nihar.jpg" alt="Portrait of Nihar Patel" width="640" height="800" />
+        <img className="portrait" src="/images/nihar.webp" alt="Portrait of Nihar Patel" width="640" height="800" />
         <div>
           <p>
             I like understanding how systems really work. I started in 2021 with Scratch, then taught
